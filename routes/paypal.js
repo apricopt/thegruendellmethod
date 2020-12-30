@@ -2,6 +2,13 @@ const express = require("express");
 const paypal = require("paypal-rest-sdk");
 const Member = require("../models/Member");
 const router = express.Router();
+let theServer;
+const dora = process.env.NODE_ENV;
+if (process.env.NODE_ENV === "development") {
+  theServer = "http://localhost:5000";
+} else {
+  theServer = "http://159.89.85.107:5000";
+}
 
 //@step1 : Check whether you are working on testing env or live env
 
@@ -42,7 +49,7 @@ router.post("/membership", (req, res) => {
     const member = await Member.find({ email: req.body.email });
     let alreadyCourses = [];
     let alreadyMember = false;
-    let alreadyMemberId ;
+    let alreadyMemberId;
     if (member.length !== 0) {
       if (member[0].courses.includes(parseInt(req.body.courseNumber))) {
         req.flash("message", "You are already subscribed to this course");
@@ -68,7 +75,7 @@ router.post("/membership", (req, res) => {
     const dataToUpdate = {
       courses: alreadyCourses,
       price: req.body.price,
-    } 
+    };
     // creating a json object
     var create_payment_json = {
       intent: "sale",
@@ -76,8 +83,8 @@ router.post("/membership", (req, res) => {
         payment_method: "paypal",
       },
       redirect_urls: {
-        return_url: "http://localhost:5000/paypal/success",
-        cancel_url: "http://localhost:5000/paypal/failed",
+        return_url: `${theServer}/paypal/success`,
+        cancel_url: `${theServer}/paypal/failed`,
       },
       // @step3 : fill the below object this will be sent to paypal and also make sure to use parseInt() method in all prices and quantity to stay protected from type error.
       transactions: [
@@ -112,26 +119,25 @@ router.post("/membership", (req, res) => {
 
         //   before pushing the data to db also insert the paymentId that came after creating payment so we can later query that with paymentid
         dataToPush.paymentId = payment.id;
-        dataToUpdate.paymentId  = payment.id;
+        dataToUpdate.paymentId = payment.id;
         // sending order to our database (Mongo)
         // @step 4 : sending the data to database in step 2 filled data will be pushed here just make sure to select the right model and just go through it
-        if(!alreadyMember){
-        const order = new Member(dataToPush);
-        order
-          .save()
-          .then((result) => {
-            console.log(order);
-          })
-          .catch((err) => console.log(err));
-
-        }else{
+        if (!alreadyMember) {
+          const order = new Member(dataToPush);
+          order
+            .save()
+            .then((result) => {
+              console.log(order);
+            })
+            .catch((err) => console.log(err));
+        } else {
           (async () => {
-            const member = await Member.findOne({email: req.body.email});
+            const member = await Member.findOne({ email: req.body.email });
             member.courses = alreadyCourses;
             member.paymentId = dataToUpdate.paymentId;
             member.price = dataToUpdate.price;
-            await  member.save();
-          })()
+            await member.save();
+          })();
         }
 
         // sending ends.
@@ -193,16 +199,16 @@ router.get("/success", (req, res) => {
               .then((result) => {
                 console.log("yeh aya g result status ka ", result);
                 // @step7 see if the success and failed urls are fine or not
-                res.flash("message" , "You have been subscribed successfully!")
-                res.redirect("http://localhost:5000/login");
+                req.flash("message", "You have been subscribed successfully!");
+                res.redirect(`${theServer}/login`);
               })
               .catch((err) => {
                 console.log(err);
               });
           } else {
             //   @step8 : also here
-            req.flash("message" , "Error Occured while making transaction")
-            res.redirect(req.header("referrer") );
+            req.flash("message", "Error Occured while making transaction");
+            res.redirect(req.header("referrer"));
           }
         }
       }
@@ -213,8 +219,8 @@ router.get("/success", (req, res) => {
 // if the payment is failed then
 router.get("/failed", (req, res) => {
   // @step 9 : also here
-req.flash("message" , "Error Occured while making transaction")
-  res.redirect(req.header("referrer") );
+  req.flash("message", "Error Occured while making transaction");
+  res.redirect(req.header("referrer"));
 });
 
 module.exports = router;
