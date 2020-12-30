@@ -1,0 +1,156 @@
+<h4>Event Managment</h4>
+<hr>
+<div style="padding: 30px 30px;">
+<button data-target="addEvent" class="btn-floating btn-large pulse modal-trigger"><i class="material-icons">add</i></button>
+</div>
+
+{{#if message}}
+<h6 class="red-text">
+ File size exceeded! Please Upload Image less than 1MB
+</h6>
+{{/if}}
+
+
+<table class="responsive-table centered highlight" style="margin: 30px 0px;">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Link</th>
+      <th>Image</th>
+      <th>Title</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+    {{#each  data}}
+      <tr class="tablerow">
+      <td>{{this.Date}}</td>
+      <td>{{this.link}}</td>
+      <td><a target="_blank" href="{{this.img}}"><img style="height: 40px ;width:40px; border-radius:50%; object-fit:cover;" src={{this.img}}></a></td>
+
+      <td style="width: 300px; overflow-x: scroll">{{ this.title }}</td>
+      <td>
+        
+        <button
+          name={{ this._id }}
+          onclick="deleteone(event)"
+          class="btn waves-effect red darken-3"
+         
+        >
+          <i class="fa fa-trash"></i>
+        </button>
+      </td>
+    </tr>
+    
+    {{/each}}
+            
+            </tbody>
+</table>
+
+
+
+
+   <div id="addEvent" class="modal">
+    <div class="modal-content">
+      <h4>Create an Event</h4>
+     {{!-- form starts --}}
+     <div class="row">
+    <form class="col s12" action="/calender/createnew" method="POST" enctype="multipart/form-data">
+      <div class="row">
+          {{!-- entry starts --}}
+        <div class="input-field col s6">
+          <input placeholder="Title" id="first_name" name="title" type="text" >
+          <label for="first_name">Title</label>
+        </div>
+        {{!-- entry ends --}}
+          {{!-- entry starts --}}
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" name="date" id="first_name" type="date" >
+          <label for="first_name">Date</label>
+        </div>
+        {{!-- entry ends --}}
+         {{!-- entry starts --}}
+        <div class="input-field col s6">
+          <input placeholder="https://example.com" name="link" id="first_name" type="text" >
+          <label for="first_name">Link</label>
+        </div>
+        {{!-- entry ends --}}
+         {{!-- entry starts --}}
+        <div class="input-field col s6">
+         <div class="file-field input-field">
+      <div class="btn">
+        <span>Image</span>
+        <input name="image" type="file">
+      </div>
+      <div class="file-path-wrapper">
+        <input name="image" class="file-path validate" type="text">
+      </div>
+    </div>
+         
+        </div>
+        {{!-- entry ends --}}
+        {{!-- entry starts --}}
+        <div class="input-field col s12">
+          <input value="Create" class="btn teal darken-3" id="first_name" type="submit" >
+         
+        </div>
+        {{!-- entry ends --}}
+        </div
+      
+        </form>
+        </div>
+     {{!-- form ends --}}
+    </div>
+    <div class="modal-footer">
+     
+    </div>
+  </div>
+         
+
+
+<script>
+  console.log("yeah script is runnung");
+  function edit(e) {
+    let element;
+
+    if (e.target.tagName !== "BUTTON") {
+      element = e.target.parentNode;
+    } else {
+      element = e.target;
+    }
+
+    console.log(element);
+  }
+
+ function deleteone(e) {
+    console.log("deleting one")
+    let element;
+
+    if (e.target.tagName !== "BUTTON") {
+      element = e.target.parentNode;
+    } else {
+      element = e.target;
+    }
+
+ axios.post("http://localhost:5000/admin/calender/deleteone" , {
+   id: element.name
+ }).then((result)=> {
+    location.reload();
+ }).catch((err) => {
+   console.log(err)
+ }) 
+
+    
+    
+  }
+  
+
+
+  
+  function handleChange(e){
+    e.target.defaultValue = e.target.value;
+    console.log("defaultvalue " ,e.target.defaultValue); 
+  }
+</script>

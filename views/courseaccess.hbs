@@ -1,0 +1,42 @@
+<div class="container-fluid " style="margin-top:150px">
+  <h1 class="text-warning text-center" >Bullef Proof immunity</h1>
+  <h5 class="text-info text-center">Number of videos : {{playlist.length}}</h5>
+  <div class="videoParent">
+<div class="row">
+  <div class="col-md-9">
+    <video controls width="100%">
+      <source src="{{url}}">
+    </video>
+  </div>
+  <div class="col-md-3 ">
+    <div class="playlist">
+      {{#each playlist}}
+      {{!-- item starts --}}
+      <a href="/courseaccess/{{courseNumber}}/{{videoNumber}}">
+    <div class="playlist-item">
+      <div class="playoverlay"><span>{{this.number}}</span></div>
+    <video width="100%">
+      <source src="/assets/videos/bulletproofimmunity/03.mp4">
+    </video>
+
+     </div> 
+     </a>
+     {{!-- item ends --}}
+     {{/each}}
+    </div>
+    
+  </div>
+</div>
+  </div>
+  <div class="description">
+
+  <h4 class="title" >{{title}}</h4>
+  <ul>
+  {{#each content}}
+  <li>
+    {{ this  }}
+  </li>
+  {{/each}}
+  </ul>
+  </div>
+</div>

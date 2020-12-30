@@ -1,0 +1,231 @@
+.header-area {
+  padding-left: 0px !important;
+  background: #1b1c1cd9 !important;
+  color: white;
+}
+
+.header-area .header-wrapper .main-menu ul li a {
+  color: white !important;
+}
+
+.section-tittle h2 {
+  font-size: 60px;
+  display: block;
+  color: #8cc12e !important;
+  font-weight: 600;
+}
+
+.btn {
+  background-color: #8cc12e !important;
+}
+
+.slider-area .hero__caption span {
+  color: #8cc12e !important;
+  text-shadow: 0px 0px 3px black;
+}
+
+.footer-area .footer-caption {
+  background-color: #8cc12e !important;
+}
+
+.section-tittle02 h2 {
+  font-size: 165px;
+  font-weight: 600;
+  text-transform: uppercase;
+  -webkit-text-stroke: 1px #f3f612 !important;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+  line-height: 1;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section-tittle span {
+  font-size: 35px;
+  margin-bottom: 22px;
+  font-family: "Great Vibes", cursive;
+  color: #cc328e !important;
+  display: block;
+}
+
+@keyframes btnwali {
+  0% {
+    background: black !important;
+  }
+  25% {
+    background: rgb(95, 95, 95) !important;
+  }
+  50% {
+    background: rgb(4, 117, 61) !important;
+  }
+  100% {
+    background-color: rgb(105, 16, 16) !important;
+  }
+}
+
+.calender-btn {
+  animation-name: btnwali !important;
+
+  animation-duration: 4s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.header-area .header-wrapper .main-menu ul ul.submenu {
+  background-color: rgb(24, 24, 24) !important;
+}
+
+.text-green {
+  color: #8cc12e !important;
+}
+
+.text-pink {
+  color: #cc328e !important;
+}
+
+.hero__caption h1 {
+  text-shadow: 1px 2px 4px #cc328e, 3px -3px 6px #8cc12e;
+}
+.logo {
+  width: 200px;
+}
+.bg-dark {
+  background: black !important;
+}
+.navbar-zack {
+  color: white !important;
+}
+.sliderpic {
+  width: 80% !important;
+  height:500px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.carousel-item h3 {
+font-size: 40px !important;
+color: greenyellow;
+
+}
+ .cardImg {
+   width: 200px !important;
+   height: 200px !important;
+ }
+
+.trailerParent {
+  padding: 30px 0px;
+}
+ .trailerParent iframe {
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+   border: 5px solid greenyellow;
+ }
+ .videoParent {
+   /* background-color: pink; */
+   height:600px;
+padding:20px 5px;
+
+}
+.playlist {
+  /* background-color: blue; */
+  padding:10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 550px;
+}
+@media (max-width:770px){
+
+.playlist {
+  height: 100%;
+  /* background-color: lime; */
+  flex-direction: row;
+  overflow-y: scroll;
+  height: 150px;
+}}
+@media (max-width:1070px){
+
+.playlist {
+  height: 100%;
+  /* background-color: lime; */
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 350px;
+}}
+@media (max-width:870px){
+
+.playlist {
+  height: 100%;
+  /* background-color: lime; */
+  flex-direction: column;
+  overflow-y: scroll;
+  height: 350px;
+}}
+@media (max-width:770px){
+
+.playlist {
+  height: 100%;
+  /* background-color: lime; */
+  flex-direction: row;
+  overflow-y: scroll;
+}
+.playlist-item {
+  height: 100px;
+ width: 150px; 
+ margin: 4px;
+}
+.playoverlay span {
+  color: white;
+  font-size: 7px;
+}
+}
+.playlist-item {
+  position: relative;
+   
+}
+.playoverlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.411);
+  padding:10px;
+}
+
+.playoverlay span {
+  color: white;
+  font-size: x-large;
+}
+.description {
+  /* background-color: lawngreen; */
+  padding:30px;
+}
+
+.description li {
+  background-color: rgb(27, 3, 27);
+  padding: 10px;
+  border: 2px solid greenyellow;
+  color: aliceblue;
+  
+}
+
+
+.title {
+  text-align: center;
+  color: azure;
+}
+/* .offers-img {
+  height:200px;
+  width: 200px !important;
+} */
+.learnimg {
+  /* height: 300px; */
+  /* width: 300px; */
+  margin: 40px;
+}

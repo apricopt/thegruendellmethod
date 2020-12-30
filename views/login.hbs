@@ -1,0 +1,40 @@
+
+<div class="container pt-5 my-5">
+    <h1 class="text-white">Login</h1>
+    <h3 class="text-warning">{{message}}</h3>
+    <div class="form-container col-md-6" >
+        <form action="/loginsubmit" method="POST">
+            {{!-- starts --}}
+          {{!-- starts --}}
+        <div class="form-group">
+          <label for="" class="text-white">Email</label>
+          <input type="text" name="email" id="" class="form-control" placeholder="Enter your Email" aria-describedby="helpId">
+        </div>
+          {{!-- ends --}}
+          {{!-- starts --}}
+          <div class="row">
+        <div class="form-group col-md-6">
+          <label for="" class="text-white">Password</label>
+          <input type="text" name="password" id="" class="form-control" placeholder="Password" aria-describedby="helpId">
+          </div>
+          <div class="form-group col-md-6">
+<div class="form-group">
+  <label for="">Course</label>
+  <select class="form-control" name="courseNumber" id="">
+    <option value="1">Bulletproof immunity</option>
+    <option value="2">cleanAsAWhistle Detox</option>
+    <option value="3">kickin's Sugar</option>
+  </select>
+</div>
+          </div>
+          {{!-- ends --}}
+<input type="hidden" name="courseNumber" value="{{courseNumber}}">        
+<input type="hidden" name="price" value="{{price}}">        
+        <div class="form-group ">
+
+        <button type="submit" class="btn btn-primary">PayNow</button>
+        </div>
+        </div>
+        </form>
+    </div>
+</div>

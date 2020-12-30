@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {{!-- materialized  --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    {{!-- fontawesome --}}
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    {{!-- my own css as we put public folder static so focus how we write path here --}}
+    <link rel="stylesheet" href="/css/style.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="/js/toastr/toastr.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Admin</title>
+</head>
+<body>
+{{> _adminnav}}
+    <div class="container">
+{{{body}}}
+    </div>
+    {{> _adminfooter}}
+    
+
+
+    {{!-- script --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js "></script>
+
+<script src="/js/toastr/toastr.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+    
+</body>
+</html>

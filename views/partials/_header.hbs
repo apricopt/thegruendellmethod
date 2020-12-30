@@ -1,0 +1,81 @@
+   {{!-- <header>
+        <!-- Header Start -->
+       <div class="header-area header-sticky">
+            <div class="header-wrapper d-flex flex-wrap align-items-center justify-content-between">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/"><img src="assets/img/zohaib/logo.png" alt=""></a>
+                </div>
+                <!-- Main-menu -->
+                <div class="main-menu d-none d-lg-block">
+                    <nav>
+                        <ul id="navigation">                                                           
+                      <li><a href="/">Home</a></li>
+                            <li><a href="/shop">Shop</a></li>
+                           
+                            <li><a href="#">Courses</a>
+                                <ul class="submenu">
+                                    <li><a href="/bulletproof">BulletProof Immunity</a></li>
+                                    <li><a href="/cleanas">CleanAsAWhistle detox</a></li>
+                                       <li><a href="/sugar">Kickin's Sugar</a></li>
+                                 </ul>
+                            </li>
+                            <li><a href="/connect">Connect</a></li>
+                            <li><a href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>          
+                <!-- Header-btn -->
+                <div class="d-none d-xl-block">
+                    <a href="/calender/dynamic" class="btn btn2 calender-btn">Calender</a>
+                </div>
+                <!-- Mobile Menu -->
+                <div class="col-12">
+                    <div class="mobile_menu d-block d-lg-none"></div>
+                </div>
+            </div>
+       </div>
+        <!-- Header End -->
+    </header> --}}
+
+
+
+    <nav class="navbar navbar-expand-sm  navbar-zack fixed-top" style="background-color: black;">
+        {{!-- <a class="navbar-brand" href="#">Navbar</a> --}}
+        <img src="/assets/img/zohaib/logo.png" class="logo" >
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav mr-auto mt-2  mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shop">Shop</a>
+                </li>
+                {{!-- <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Learn</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdownId">
+                        <a class="dropdown-item" href="/bulletproof">BulletProof Immunity</a>
+                        <a class="dropdown-item"href="/cleanas">CleanAsAWhistle detox</a>
+                        <a class="dropdown-item" href="/sugar">Kickin's Sugar</a>
+                    </div>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/learn">Learn</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/connect">Connect</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="/calender/dynamic">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Calender</button>
+            </form>
+        </div>
+    </nav>
