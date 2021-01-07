@@ -14,7 +14,7 @@
                                 <div class="card">
                                     <div class="card-content  green white-text">
                                         <p class="card-stats-title"><i class="mdi-social-group-add"></i> Contact Entries</p>
-                                        <h4 class="card-stats-number">566</h4>
+                                        <h4 class="card-stats-number">{{contactEntries}}</h4>
                                         {{!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span>
                                         </p> --}}
                                     </div>
@@ -26,8 +26,8 @@
                             <div class="col s12 m6 l4 l3">
                                 <div class="card">
                                     <div class="card-content purple white-text">
-                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Events this month</p>
-                                        <h4 class="card-stats-number">2</h4>
+                                        <p class="card-stats-title"><i class="mdi-editor-attach-money"></i>Events added</p>
+                                        <h4 class="card-stats-number">{{eventEntries}}</h4>
                                         {{!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 70% <span class="purple-text text-lighten-5">last month</span>
                                         </p> --}}
                                     </div>
@@ -40,8 +40,8 @@
                             <div class="col s12 m6 l4 l3">
                                 <div class="card">
                                     <div class="card-content blue-grey white-text">
-                                        <p class="card-stats-title"><i class="mdi-action-trending-up"></i> Number of visitors</p>
-                                        <h4 class="card-stats-number">4</h4>
+                                        <p class="card-stats-title">Members</p>
+                                        <h4 class="card-stats-number">{{memberEntries}}</h4>
                                         {{!-- <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 80% <span class="blue-grey-text text-lighten-5">from yesterday</span>
                                         </p> --}}
                                     </div>

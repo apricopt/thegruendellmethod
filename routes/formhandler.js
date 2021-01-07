@@ -5,7 +5,7 @@ const Member = require("../models/Member")
 
 
 
-router.post("/contactrsubmit", (req, res) => {
+router.post("/contactsubmit", (req, res) => {
   console.log(req.body);
 
   const contact = new Contact({
@@ -47,5 +47,7 @@ router.post("/loginsubmit" , async (req, res) => {
 res.redirect(`/courseaccess/${courseNumber}/1`)
   
 })
+
+
 
 module.exports = router;

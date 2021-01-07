@@ -1,0 +1,155 @@
+
+<h4 class="teal-text center">Members</h4>
+<hr  />
+
+<table class="responsive-table centered highlight">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email Address</th>
+      <th>Date of subscription</th>
+      <th>Courses Enrolled In</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {{#each data}}
+    <tr class="tablerow">
+      <td>{{ this.name }}</td>
+      <td>{{ this.email }}</td>
+      <td>{{ this.dateOfSubscription }}</td>
+      <td>{{ this.courses }}</td>
+
+      <td>
+        <form action="/admin/members/deleteone/{{this._id}}">
+
+        <input 
+          name={{ this._id }}
+          class="btn waves-effect red darken-3"
+          value="Delete"
+          type="submit"
+        >
+
+        </form>
+      </td>
+    </tr>
+     <!-- Edit Modal Structure -->
+  <div id={{this._id}} class="modal">
+    <form class="col s12"  method="POST" action="/admin/contact/editone">
+    <div class="modal-content">
+      <h4>Edit</h4>
+      <p>{{this.name}}</p>
+     <div class="row">
+    
+      <div class="row">
+        <div class="input-field col s6">
+          <input onkeyup="handleChange(event)" placeholder="" id="name" value={{this.name}}  name="name" type="text" class="validate">
+          <label for="first_name">Name</label>
+        </div>
+        <div class="input-field col s6">
+          <input onkeyup="handleChange(event)" name="email"   id="email" type="email" value={{this.email}}>
+          <label for="last_name">Email Address</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input   value={{this.phone}} onkeyup="handleChange(event)"  id="name" type="text" class="validate" name="phone">
+          <label for="first_name">Phone</label>
+        </div>
+        <div class="input-field col s6">
+          <input onkeyup="handleChange(event)"  id="message" type="text" class="validate" name="message" value="{{this.message}}">
+          <label for="message">Message</label>
+          <input name="id" value="{{this._id}}" type="hidden" />
+        </div>
+       
+      </div>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Discard</a>
+       <input type="submit" value="Save" class="btn" >
+      
+    </div>
+      </form>
+  </div>
+  {{!-- modal structure ends --}}
+    {{/each}}
+  </tbody>
+</table>
+<div style="margin: 30px 0px">
+   <form action="/export/contact" style="color:white"></form>
+  <a
+    href="/admin/contact/delete"
+    class="btn waves-effect red darken-3"
+    name="action"
+    >Delete All
+    <i class="fa fa-trash"></i>
+  </a>
+ 
+  <input style="color:white;" class="btn waves-effect teal lighten-4" value="Export To Excel" type="submit" name="action">
+   
+   
+    </form>
+</div>
+
+  <!-- Modal Trigger -->
+  {{!-- <button data-target="editModal" class="btn modal-trigger">Modal</button> --}}
+
+ 
+
+<script>
+  console.log("yeah script is runnung");
+  function edit(e) {
+    let element;
+
+    if (e.target.tagName !== "BUTTON") {
+      element = e.target.parentNode;
+    } else {
+      element = e.target;
+    }
+
+    console.log(element);
+  }
+
+ function deleteone(e) {
+    console.log("deleting one")
+    let element;
+
+    if (e.target.tagName !== "BUTTON") {
+      element = e.target.parentNode;
+    } else {
+      element = e.target;
+    }
+
+ axios.post("http://localhost:5000/admin/contact/deleteone" , {
+   id: element.name
+ }).then((result)=> {
+    location.reload();
+ }).catch((err) => {
+   console.log(err)
+ }) 
+
+    
+    
+  }
+  let tablerow = document.querySelectorAll(".tablerow");
+  let tablerowArr = Array.from(tablerow);
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, options);
+  });
+
+
+
+
+
+  function handleChange(e){
+    e.target.defaultValue = e.target.value;
+    console.log("defaultvalue " ,e.target.defaultValue); 
+  }
+</script>
+
+
+  
