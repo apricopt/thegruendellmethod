@@ -1,6 +1,6 @@
 const courses = [
   {
-    title: "Bullet Proof Immunity",
+    title: "#bulletproofimmunity",
     playlist: [
       {
         number: "Video #1",

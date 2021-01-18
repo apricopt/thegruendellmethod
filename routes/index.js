@@ -22,8 +22,8 @@ router.get("/bulletproof", (req, res) => {
     courseNumber: 1,
     header: "/assets/img/zohaib/bulletproof.jpg",
     content:
-      "Professionally guided course teaching you how to quickly and effectively boost your immune system. This course will help anyone achieve internal immunity boost through natural, proactive methods – such as slight altering of diet, taking detox hot baths, and jumpstarting the lymph system. Once strengthened, the human immune system can fight off ANY virus.",
-    price: 34,
+      "Professionally guided course teaching you how to quickly and effectively boost your immune system. This course will help anyone achieve internal immunity boost through natural, proactive methods – such as slight altering of diet, taking detox hot baths, and jumpstarting the lymph system. Once strengthened, the human immune system can fight off anything that comes its way.",
+    price: 27,
   });
 });
 
@@ -59,7 +59,7 @@ router.get("/subscribe/:courseNumber", (req, res) => {
   let price;
   switch (courseNumber) {
     case 1:
-      price = 100;
+      price = 27;
       courseName = "Bullet Proof Immunity";
       break;
     case 2:
@@ -85,6 +85,7 @@ router.get("/courseaccess/:courseNumber/:videoNumber", (req, res) => {
   const courseName = course.title;
   const playlist = course.playlist.map((video, index) => {
     return {
+        courseTitle: courseName,
       title: video.title,
       url: video.url,
       content: video.content,

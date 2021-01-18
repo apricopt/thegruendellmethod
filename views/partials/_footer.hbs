@@ -3,42 +3,75 @@
             <!-- Footer Caption -->
             <div class="footer-caption wow fadeInRight" data-wow-delay=".6s">
                 <div class="footer-tittle">
-                    <h3>Healthy life<br> is a joy.</h3>
+                    <h3 style="font-size:30px;margin:0px; padding: 0px; ">Self-Health Care<br> is Empowerment </h3>
                 </div>
                 <div class="footer-menu ">
                     <div class="single-menu">
-                        <div class="single-menu1">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Contact</h4>
-                                    <div class="footer-pera">
-                                        <p>Adress will come here </p>
+<div class="single-menu1">
+<div class="single-footer-caption mb-50">
+<div class="footer-tittle">
+<h4 class="mt-5">Contact</h4>
+<div class="footer-pera">
+{{!-- form starts here --}}
+  
+                        <form class="form-contact contact_form" action="/contactsubmit" method="POST">
+                            <div class="row">
+                                <div class="col-12">
+
+                                    <div class="form-group">
+                                        <textarea   class="form-control footerinput w-100" name="message" id="message" cols="10" rows="1" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'" placeholder=" Enter Message"></textarea>
+                                    </div>
+                                
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input style="" class="form-control footerinput valid" name="name" id="name" type="text"  placeholder=" name">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="single-menu2">
-                            <div class="single-footer-caption mb-50">
-                                <div class="footer-tittle">
-                                    <h4>Links</h4>
-                                    <ul>
-                                        <li><a href="#">Home</a></li>
-                                        <li><a href="#"> About Us</a></li>
-                                        <li><a href="#"> Our History</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                    </ul>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control footerinput  valid" name="email" id="email" type="email"  placeholder="Email">
+                                    </div>
+                                </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="single-menu3">
+                            <div class="form-group mt-3">
+                                {{!-- <button type="submit" class="button button-contactForm boxed-btn">Send</button> --}}
+                                <input type="submit"  value="Send" />
+                            </div>
+                        </form>
+
+
+{{!-- form ends here --}}
+</div>
+</div>
+</div>
+{{!-- <div class="single-menu2"> --}}
+{{!-- <div class="single-footer-caption mb-50"> --}}
+{{!-- <div class="footer-tittle"> --}}
+{{!-- <h4>Links</h4> --}}
+{{!-- <ul> --}}
+{{!-- <li><a href="#">Home</a></li> --}}
+{{!-- <li><a href="#"> About Us</a></li> --}}
+{{!-- <li><a href="#"> Our History</a></li> --}}
+{{!-- <li><a href="#">Contact</a></li> --}}
+{{!-- </ul> --}}
+{{!-- </div> --}}
+{{!-- </div> --}}
+{{!-- </div> --}}
+                        <div  class="single-menu3 float-left">
                             <div class="single-footer-caption">
                                 <div class="footer-tittle">
-                                    <h4>Social</h4>
+                                    <h4 class="mt-4">Social</h4>
                                     <!-- Social -->
                                     <div class="footer-social">
-                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                        <a href="#"><i class="fab fa-twitter"></i></a>
-                                        <a href="#"><i class="fas fa-globe"></i></a>
+                                        <a href="
+https://www.facebook.com/thegruendellmethod
+"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="
+instagram.com/thegruendellmethod
+"><i class="fab fa-instagram"></i></a>
+                                        <a href="#"><i class="fas fa-ticktok"></i></a>
                                     </div>
                                 </div>
                             </div>

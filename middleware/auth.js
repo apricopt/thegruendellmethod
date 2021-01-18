@@ -1,6 +1,7 @@
 const session = require('express-session');
 module.exports = function(req, res , next) {
-    if(req.session.loggedin){
+if(req.session.loggedin){
+// if(true){
         console.log("user was logged in access granted")
         next();
     }else {

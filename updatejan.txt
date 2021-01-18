@@ -1,0 +1,89 @@
+Reorder the page layout:
+1. Youtube trailer at the very top
+2. Carousel (heartmath/meditations, healing & wellness lifestyle, fitness, nutrition, small batch natural products)
+(Remove "What we Offer")
+3. Learn, shop, events section
+4. IG Feed (Picture red shirt left. IG Feed embedded Right)
+5. Hello From Elizabeth Gruendell (Text left. Black sweatshirt picture right.)
+6. Testimonials - Please insert these ones for now: 
+"Elizabeth is awesome. She helped me through some of my most painstaking days and now I live free of pain and also free of medication."
+-Jay
+"Elizabeth helped me through some pretty rough times. She gave me tools that I needed to help me deal with my PTSD. Her meditation sessions were relaxing and rejuvenating. I definitely recommend her services for people like me!"
+-Sandra E.
+7. Page footer green section
+
+Page by page amends:
+On the home-page carousel, 
+1. Change "Gardening" to "Grow Your Own Food"
+2. Change "Heartmaths" to "Heartmath & Meditations" 
+Insert attached heartmath photo in place of the heart pillow background.
+3. Change "Small batch" to "Small Batch Natural Products"
+Replace "description" with "Homemade, Handcrafted, Healing."
+
+4. Remove the portion that says "What We Offer" 
+
+https://www.facebook.com/thegruendellmethodUnderneath the Learn shop events section will follow the picture of the redshirt on the left side. The text in this section on the right will be shortened and moved in the next step, and the Instagram embedded feed will appear in its place.
+I understand it will go when the site is live, but that is the new desired placement for it.
+
+5. Under the old "Hello from Elizabeth Gruendell" section:
+Remove everything from "welcome to my classroom" to "thoughtless friend"
+and leave the last few sentences only. 
+Take these last few sentences and the title and place them at the beginning of the next section.
+Replace the title from "so you want to know my why" to "Hello from Elizabeth Gruendell" and begin the next sentences "I am living proof..." at the top of the current paragraph that begins with "the gruendell method is the...".
+Also, reduce the size of the above picture (Red shirt) to 1/3 if possible.
+The section where we removed the chunk of text will be the new placement for the IG feed, just to the right of the picture (red shirt). No titles necessary above here.
+
+6. Under the old "So you want to know my why" Section
+This section should be titled "Hello from Elizabeth Gruendell" now and "so you want to know my why" can be deleted.
+This paragraph should begin with "I am living proof that you can heal..." now.
+Change the sentence beginning with "My life's work is for individuals who..." to say
+"My life's work is for individuals who have little to no hope left, but still want to heal at the root cause and enjoy a vibrant life."
+7. Remove the small social media icons under this section.
+
+SEE ABOVE TO INSERT TESTIMONIALS IN APPROPRIATE SECTION.
+
+8. Remove the following links from the site footer (green section at the bottom):
+home. 
+about us.
+our history.
+contact.
+Make this section 1/3 of its current size so that it is not so prominent on every page.
+Match the green in this section to the green in her logo (i.e. more subtle, less opacity).
+Change "Healthy life is a joy" to "Self-Health Care is Empowerment"
+Make a mini contact form under the contact section on the left to replace the "address will come here" text. 
+Only "name," "email," and "message" boxes will suffice here.
+Have the social media linked icons on the right.
+
+9. On the contact page.
+remove address section 
+remove hours section
+to the right
+
+10. On the connect page.
+replace the words "follow on instagram" "like on facebook" and "subscribe on youtube"
+with the social media icons placed centered left to right. They can be slightly larger than before but not too prominent, your call.
+
+On the learn page.
+11. Make the courses "Clean as a whistle" and "kickin sugar" invisible for now. 
+These courses are still in production and won't be ready for a while.
+12. Under the "Bulletproof Immunity" section and also on the "bulletproof immunity" page as well.
+Change the first sentence to say
+"Self guided course with an expert teaching you how to quickly and effectively boost your immune system."
+Change the final words "any virus" to say "anything that comes its way."
+13. Change the price of the Bulletproof Immunity course to be $27/month 
+for access cancel anytime after you've completed the course.
+14. Change the bulletproof immunity icon from a picture of weights to a stock image of water or produce, your call.
+
+On the shop page.
+15. Change "comming soon" to the picture and description of the homemade deodorant that she sent you previously via email. Until this can be completed, make it say "Coming Soon" instead.
+
+On member login page.
+16. Change "pay now" button to "Login Now"
+
+all of her social media should be linked to these appropriately:
+instagram.com/thegruendellmethod
+https://www.facebook.com/thegruendellmethod
+tictok will forward you soon
+thegruendellmethod@gmail.com
+
+Heartmath photo below.

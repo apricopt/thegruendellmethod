@@ -1,4 +1,4 @@
-.header-area {
+.bheader-area {
   padding-left: 0px !important;
   background: #1b1c1cd9 !important;
   color: white;
@@ -23,10 +23,20 @@
   color: #8cc12e !important;
   text-shadow: 0px 0px 3px black;
 }
+.footer-area {
+    
+  background-size:50% !important;
+  }
 
 .footer-area .footer-caption {
+    height:500px !important;
   background-color: #8cc12e !important;
 }
+
+.footer-area .footer-title {
+  font-size:10px !important;
+}
+
 
 .section-tittle02 h2 {
   font-size: 165px;
@@ -124,7 +134,7 @@
 }
 .videoParent {
   /* background-color: pink; */
-  height: 600px;
+  height: auto;
   padding: 20px 5px;
 }
 .playlist {
@@ -225,4 +235,8 @@
 
 .select-control {
   height: 40px !important;
+}
+.footerinput {
+background : #0b1416 !important;
+box-shadow: 0px 0px 2px black;
 }
