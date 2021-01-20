@@ -21,8 +21,6 @@ router.get("/",async (req, res) => {
         console.log(error)
                 res.render("index" , {
                 feed1 : "http://www.instagram.com/p/CKPQ0_JgTK4/",
-                feed2 : threePosts[1],
-                    feed3: threePosts[2]
     })
 }});
 
