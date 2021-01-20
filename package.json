@@ -14,7 +14,8 @@
     "mongoose": "^5.10.16",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "paypal-rest-sdk": "^1.8.1"
+    "paypal-rest-sdk": "^1.8.1",
+    "user-instagram": "^2.1.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.6"

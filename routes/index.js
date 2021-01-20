@@ -2,10 +2,29 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const flash = require("connect-flash");
+const userInstagram = require("user-instagram")
 
 const courses = require("../config/courses");
-router.get("/", (req, res) => {
-  res.render("index");
+router.get("/",async (req, res) => {
+    
+    const result = await userInstagram('thegruendellmethod')
+      let  threePosts = result.posts.map(item =>  
+           item.url
+
+        ) 
+            
+                res.render("index" , {
+                feed1 : threePosts[0],
+                feed2 : threePosts[1],
+                    feed3: threePosts[2]
+
+            
+            })
+
+
+      
+    
+
 });
 
 router.get("/calender", (req, res) => {

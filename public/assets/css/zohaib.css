@@ -1,4 +1,4 @@
-.bheader-area {
+.header-area {
   padding-left: 0px !important;
   background: #1b1c1cd9 !important;
   color: white;
@@ -11,16 +11,16 @@
 .section-tittle h2 {
   font-size: 60px;
   display: block;
-  color: #8cc12e !important;
+  color: #a9dd77 !important;
   font-weight: 600;
 }
 
 .btn {
-  background-color: #8cc12e !important;
+  background-color: #a9dd77 !important;
 }
 
 .slider-area .hero__caption span {
-  color: #8cc12e !important;
+  color: #a9dd77 !important;
   text-shadow: 0px 0px 3px black;
 }
 .footer-area {
@@ -30,7 +30,7 @@
 
 .footer-area .footer-caption {
     height:500px !important;
-  background-color: #8cc12e !important;
+  background-color: #a9dd77 !important;
 }
 
 .footer-area .footer-title {
@@ -86,7 +86,7 @@
 }
 
 .text-green {
-  color: #8cc12e !important;
+  color: #a9dd77 !important;
 }
 
 .text-pink {
@@ -94,7 +94,7 @@
 }
 
 .hero__caption h1 {
-  text-shadow: 1px 2px 4px #cc328e, 3px -3px 6px #8cc12e;
+  text-shadow: 1px 2px 4px #cc328e, 3px -3px 6px #a9dd77;
 }
 .logo {
   width: 200px;

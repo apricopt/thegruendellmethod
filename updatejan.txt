@@ -1,4 +1,4 @@
-Reorder the page layout:
+Rndeeorder the page layout:
 1. Youtube trailer at the very top
 2. Carousel (heartmath/meditations, healing & wellness lifestyle, fitness, nutrition, small batch natural products)
 (Remove "What we Offer")
