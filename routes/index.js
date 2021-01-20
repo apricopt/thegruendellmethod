@@ -6,8 +6,10 @@ const userInstagram = require("user-instagram")
 
 const courses = require("../config/courses");
 router.get("/",async (req, res) => {
-    
-    const result = await userInstagram('thegruendellmethod')
+    try{
+
+
+    const result = await userInstagram('http://instagram.com/thegruendellmethod')
       let  threePosts = result.posts.map(item =>  
            item.url
 
@@ -21,6 +23,10 @@ router.get("/",async (req, res) => {
             
             })
 
+
+    }    catch(error) {
+        console.log(error)
+    }
 
       
     
