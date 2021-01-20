@@ -7,30 +7,23 @@ const userInstagram = require("user-instagram")
 const courses = require("../config/courses");
 router.get("/",async (req, res) => {
     try{
-
-
     const result = await userInstagram('http://instagram.com/thegruendellmethod')
       let  threePosts = result.posts.map(item =>  
            item.url
-
         ) 
-            
                 res.render("index" , {
                 feed1 : threePosts[0],
                 feed2 : threePosts[1],
                     feed3: threePosts[2]
-
             
             })
-
-
     }    catch(error) {
         console.log(error)
+                res.render("index" , {
+                feed1 : "http://www.instagram.com/p/CKPQ0_JgTK4/",
+                feed2 : threePosts[1],
+                    feed3: threePosts[2]
     }
-
-      
-    
-
 });
 
 router.get("/calender", (req, res) => {
