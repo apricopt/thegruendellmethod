@@ -7,7 +7,7 @@ const userInstagram = require("user-instagram")
 const courses = require("../config/courses");
 router.get("/",async (req, res) => {
     try{
-    const result = await userInstagram('http://instagram.com/thegruendellmethod')
+    const result = await userInstagram('https://instagram.com/thegruendellmethod')
       let  threePosts = result.posts.map(item =>  
            item.url
         ) 

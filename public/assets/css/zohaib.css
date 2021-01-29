@@ -240,3 +240,38 @@
 background : #0b1416 !important;
 box-shadow: 0px 0px 2px black;
 }
+.carousel-caption  h3{
+    text-shadow:0px 0px 7px black , 0px 0px 30px black;
+}
+
+
+.productContainer {
+    border: 1px solid #a9dd77;
+
+    padding:20px 10px;
+}
+
+.productCard {
+/* background: pink; */
+display:flex;
+padding:10px;
+}
+
+
+.productCard img {
+width:300px;
+object-fit:contain
+    
+}
+
+.productCard h6 {
+    padding: 0px 10px;
+}
+.productCard ul {
+    list-style: none;
+    padding:0px 10px;
+}
+.productCard ul li {
+    background-color: white;
+    border:1px solid #a9dd77;
+} 

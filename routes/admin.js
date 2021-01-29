@@ -8,6 +8,7 @@ const Member = require("../models/Member");
 const fns = require("date-fns");
 const checkAuth = require("../middleware/auth");
 const User = require("../models/User");
+const Order = require("../models/Order");
 
 // admin panel route
 router.get("/admin/login", (req, res) => {
@@ -29,6 +30,24 @@ router.get("/admin", checkAuth, async (req, res) => {
     memberEntries: memberEntries,
   });
 });
+
+
+router.get("/admin/order" , (req ,res) => {
+  let data;
+  (async () => {
+    try {
+      data = await Order.find().lean();
+      //  data = JSON.parse(data);
+      console.log(data);
+      res.render("admin/orderAdmin", {
+        data: data,
+        layout: "adminLayout",
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  })();
+})
 
 router.get("/admin/contact", checkAuth, (req, res) => {
   let data;

@@ -1,0 +1,96 @@
+
+<div class="container pt-5">
+
+
+<div class="row">
+                    <div class="col-12 mt-5 pt-5">
+                        <h2 class="contact-title text-center text-pink">Checkout</h2>
+                        <h4 style="color:orange" class="text-center">Price : $<span id="price">11</span></h4>
+                    </div>
+                    <div class="col-lg-8">
+                        {{#if message}}
+                        <div class="alert alert-success alert-dismissible">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{message}}!
+</div>
+{{/if}}
+                        <form class="form-contact contact_form" action="/checkout" method="POST">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control  valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control  valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="contact" id="name" type="text" onfocus="this.placeholder = 'Contact number'" placeholder="Contact number">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" onblur="handlePrice(event)" name="qty"  id="qty" type="text"  placeholder="Quantity">
+                                    </div>
+                                </div>
+                                 <div class="col-sm-6"></div>
+                                 <div class="col-sm-6"></div>
+                                <div class="col-12">
+                                    <div class="form-group">
+                                        <input class="form-control" name="address"  placeholder="Enter Address">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group mt-3">
+                                {{!-- <button type="submit" class="button button-contactForm boxed-btn">Send</button> --}}
+                                <input type="submit"  value="PayNow" />
+                                <input type="hidden" name="price" id="priceSending" >
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="media contact-info">
+{{!-- <span class="contact-info__icon"><i class="ti-home"></i></span> --}}
+                            <div class="media-body">
+{{!-- <h3>Las Vegas, Nevada.</h3> --}}
+{{!-- <p>Adress will come here</p> --}}
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+{{!-- <span class="contact-info__icon"><i class="ti-tablet"></i></span> --}}
+                            <div class="media-body">
+{{!-- <h3>+00123141231</h3> --}}
+{{!-- <p>Mon to Fri 9am to 6pm</p> --}}
+                            </div>
+                        </div>
+                        <div class="media contact-info">
+                            <span class="contact-info__icon"><i class="ti-email"></i></span>
+                            <div class="media-body">
+                                <h3>support@thegruendellmethod.com</h3>
+                                <p>Send us your query anytime!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+
+   <script>
+      const qtyElement = document.getElementById("qty")
+           qtyElement.addEventListener("blur" , handlePrice)
+      qtyElement.defaultValue = "1"
+
+       function handlePrice(e) {
+           const priceElement = document.getElementById('price')
+        const qty = e.target.value;
+           let totalPrice = qty*11
+            priceElement.innerHTML = totalPrice;
+           if(qty == "") {
+               e.target.value = 1
+           }
+    document.getElementById("priceSending").value =     totalPrice
+       }
+   </script>
