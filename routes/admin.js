@@ -212,6 +212,24 @@ router.post("/admin/loginauth", async (req, res) => {
 });
 
 
+// to delete all orders
+router.get("/admin/order/delete", checkAuth, (req, res) => {
+  Order.deleteMany()
+    .then((result) => {
+      res.redirect("/admin/order");
+    })
+    .catch((err) => console.log(err));
+});
+
+// to delte one order
+router.post("/admin/order/deleteone", checkAuth, (req, res) => {
+  console.log(req.body);
+  Order.deleteOne({ _id: req.body.id })
+    .then((result) => {
+      res.send("deleted");
+    })
+    .catch((err) => console.log(err));
+});
 
 router.get("/auth/logout", checkAuth, (req, res) => {
   req.session.loggedin = false;

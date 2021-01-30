@@ -14,7 +14,7 @@
       <th>Price</th>
 {{!-- <th>PaymentId</th> --}}
       
-      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -44,7 +44,7 @@
     </tr>
      <!-- Edit Modal Structure -->
   <div id={{this._id}} class="modal">
-    <form class="col s12"  method="POST" action="/admin/contact/editone">
+    <form class="col s12"  method="POST" action="/admin//editone">
     <div class="modal-content">
       <h4>Edit</h4>
       <p>{{this.name}}</p>
@@ -86,7 +86,7 @@
 </table>
 <div style="margin: 30px 0px">
   <a
-    href="/admin/contact/delete"
+    href="/admin/order/delete"
     class="btn waves-effect red darken-3"
     name="action"
     >Delete All
@@ -126,7 +126,7 @@
       element = e.target;
     }
 
- axios.post("http://localhost:5000/admin/contact/deleteone" , {
+ axios.post("http://localhost:5000/admin/order/deleteone" , {
    id: element.name
  }).then((result)=> {
     location.reload();
@@ -140,7 +140,7 @@
   let tablerow = document.querySelectorAll(".tablerow");
   let tablerowArr = Array.from(tablerow);
 
-
+order
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.modal');
     var instances = M.Modal.init(elems, options);
