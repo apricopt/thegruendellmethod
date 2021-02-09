@@ -276,7 +276,7 @@ object-fit:contain
     border:1px solid #a9dd77;
 } 
 
-.crt-post- {
-    border:3px solid #a9dd77 !important;
-    margin:2px !important;
-}
+/* .crt-post- { */
+/* border:3px solid #a9dd77 !important; */
+/* margin:2px !important; */
+/* } */
