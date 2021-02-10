@@ -64,11 +64,11 @@ const courses = [
         number: "Video #6",
         title: "Move your body - Jumping Jacks/Jumping Rope/Ice Skaters",
         content: [
-          "Beginners start with 5 minutes in the sun, and build up to 20 to 30 minutes.",
+          "Beginners start with 5 minutes in the sun, and build up to 20 to 30 minutes",
           "50 seconds work followed by,10 seconds rest (until you work up to continuous work, without resting)",
-          "Make sure the sun is hitting your skin and, ideally, your eyes. Be a kid again, smile and have joy in your heart.",
+          "Make sure the sun is hitting your skin and, ideally, your eyes. Be a kid again, smile and have joy in your heart",
           " You will make Vitamin D which will help low energy, depression, brittle bones, always getting sick and hair loss",
-          "You will increase your fast twitch muscle fibers and fire up sleeping accessory muscles which means no more joint pain (and a sexy shape)And you will move your lymphatic system which means the toxic crap is removed and the good stuff floods the cells.",
+          "You will increase your fast twitch muscle fibers and fire up sleeping accessory muscles which means no more joint pain (and a sexy shape)And you will move your lymphatic system which means the toxic crap is removed and the good stuff floods the cells"
         ],
         url: "/assets/videos/bulletproofimmunity/06.mp4",
       },
@@ -77,12 +77,12 @@ const courses = [
         title:
           "Turn on your detoxing & healing system (AKA, the parasympathetic nervous system)",
         content: [
-          "Practice HeartMath - deep, rhythmic breathing with your focus on the present moment while intentionally increasing your body’s electromagnetic field frequency to one of healing and wellness.",
-          "*Bonus - Touch nature (or, cement that touches earth) to balance your electromagnetic field.",
+          "Practice HeartMath - deep, rhythmic breathing with your focus on the present moment while intentionally increasing your body’s electromagnetic field frequency to one of healing and wellness",
+          "*Bonus - Touch nature (or, cement that touches earth) to balance your electromagnetic field",
           "Sit someplace quiet, the more plants around the better",
           "Bring all your focus and attention to your heart area with your breath flowing in and out of that area",
           "Slow your breath",
-          "Increase your electromagnetic field by initiating a positive emotion- use a memory if you need a favorite moment, person or dream. Don't just think about it, feel it. Experience it as though it were real, what did you;",
+          "Increase your electromagnetic field by initiating a positive emotion- use a memory if you need a favorite moment, person or dream. Don't just think about it, feel it. Experience it as though it were real",
           "Lock in that energy and intensify it. Send that healing energy to every cell of your body and then out to the world  ",
         ],
         url: "/assets/videos/bulletproofimmunity/05.mp4",
@@ -104,27 +104,27 @@ const courses = [
         number: "Video #9",
         title: "Heal in your sleep",
         content: [
-          "always try to get 8 hours of sleep, this is when our body does its repair work. Turn electronics off 2 hours prior to bedtime, no blue light, WiFi or Bluetooth. For best results, schedule bedtime before 10p. If you have trouble sleeping, try several pistachios before bed (boost melatonin), assure complete darkness and cool the room or bed 10 degrees at bed time to trigger sleep. Still having trouble? Reach out, you may have a bigger underlying issue going on",
+          "Always try to get 8 hours of sleep, this is when our body does its repair work. Turn electronics off 2 hours prior to bedtime, no blue light, WiFi or Bluetooth. For best results, schedule bedtime before 10p. If you have trouble sleeping, try several pistachios before bed (boost melatonin), assure complete darkness and cool the room or bed 10 degrees at bed time to trigger sleep. Still having trouble? Reach out, you may have a bigger underlying issue going on.",
         ],
         url: "/assets/videos/bulletproofimmunity/09.mp4",
       },
       {
         number: "Video #10",
         title:
-          "Drink hot water with ½ a lemons juice on an empty stomach first thing in the morning to flush the liver",
+          "Drink hot water with the juice of half of a lemon  on an empty stomach first thing in the morning to flush the liver.",
         content: [],
         url: "/assets/videos/bulletproofimmunity/10.mp4",
       },
       {
         number: "Video #11",
-        title: "Take a Flu shot",
+        title: "Take a Flu Shot",
         content: [
           "Raw honey",
           "Lemon juice",
           "Fresh garlic ",
           "Raw apple cider vinegar",
           "Cayenne pepper",
-          "Mix a batch and portion it out, keep as a reserve in the freezer. Mix to taste but one shot should be roughly ½ lemon, ½ vinegar, a crushed medium garlic clove, pinch of cayenne and tablespoon of honey.",
+          "Mix a batch and portion it out, keep as a reserve in the freezer. Mix to taste but one shot should be roughly ½ lemon, ½ vinegar, a crushed medium garlic clove, pinch of cayenne and tablespoon of honey",
         ],
         url: "/assets/videos/bulletproofimmunity/11.mp4",
       },

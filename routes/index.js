@@ -38,7 +38,7 @@ router.get("/bulletproof", (req, res) => {
     courseNumber: 1,
     header: "/assets/img/zohaib/bulletproof.jpg",
     content:
-      "Professionally guided course teaching you how to quickly and effectively boost your immune system. This course will help anyone achieve internal immunity boost through natural, proactive methods – such as slight altering of diet, taking detox hot baths, and jumpstarting the lymph system. Once strengthened, the human immune system can fight off anything that comes its way.",
+      "Professionally guided course teaching you how to quickly and effectively boost your immune system. This course will help anyone achieve internal immunity boost through natural, proactive methods – such as  altering of diet, taking  hot detox baths, and jumpstarting the lymph system. Once strengthened, the human immune system can fight off anything that comes its way.",
     price: 27,
   });
 });
