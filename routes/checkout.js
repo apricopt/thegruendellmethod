@@ -44,13 +44,18 @@ router.get("/checkout" , (req, res)=> {
 router.post("/checkout" , (req , res) => {
   // @step2 : fill the below object this will be the data sent to the database with paid status as false because after successfull payment we will change it to true
 
+    console.log("this body is recieved" , req.body)
+    let price;
+    if(req.body.price.length == 0  ) {
+        price= 11
+    }
     const dataToPush = {
       //   fill all the other entries
       name: req.body.name,
       email: req.body.email,
       contact: req.body.contact,
       qty : req.body.qty,
-      price: req.body.price,
+      price: price,
       address: req.body.address,
       //   do not remove the paid
       paid: false,
@@ -73,7 +78,7 @@ router.post("/checkout" , (req , res) => {
               {
                 name: req.body.name,
                 sku: req.body.email,
-                price: parseInt(req.body.price),
+                price: parseInt(price),
                 currency: "USD",
                 quantity: 1,
               },
@@ -81,7 +86,7 @@ router.post("/checkout" , (req , res) => {
           },
           amount: {
             currency: "USD",
-            total: parseInt(req.body.price),
+            total: parseInt(price),
           },
           description: "This is the payment description.",
         },

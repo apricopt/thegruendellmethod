@@ -91,7 +91,7 @@ const courses = [
         number: "Video #8",
         title: "Grow & Eat Sprouts",
         content: [
-          "supercharge your immunity, any type of veggie seed will work, in front of a window. Broccoli, cabbage, and Brussels sprouts have tons of good stuff. Only takes a week to harvest!",
+          "Supercharge your immunity, any type of veggie seed will work, in front of a window. Broccoli, cabbage, and Brussels sprouts have tons of good stuff. Only takes a week to harvest!",
           "Always Organic",
           "Preferably Heirloom",
           "Buy in bulk",
