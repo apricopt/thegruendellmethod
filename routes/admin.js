@@ -141,10 +141,12 @@ router.get("/admin/members/deleteone/:id", checkAuth, (req, res) => {
     .catch((err) => console.log(err));
 });
 
-router.get("/admin/calender", checkAuth, (req, res) => {
-  async () => {
+router.get("/admin/calender", checkAuth, async(req, res) => {
     try {
-      const data = await Calender.find().lean();
+const data = await Calender.find().lean();
+        console.log("g try k andr agya aur data yeh aya ", data)
+
+
       // g date ayi thi pares ho kar
       // let dateJoAyi = data[0].Date;
       // ab mai ausy format karunga
@@ -171,8 +173,9 @@ router.get("/admin/calender", checkAuth, (req, res) => {
       });
     } catch (error) {
       console.log(error);
+        console.log("Error agya bhai")
     }
-  };
+
 });
 
 // to del one calender
