@@ -24,7 +24,6 @@ const admin = require("./routes/admin");
 const calender = require("./routes/calender");
 const upload = require("./routes/fileupload");
 const paypal = require("./routes/paypal");
-const instafeed = require("./routes/instafeed");
 const checkout = require("./routes/checkout")
 const app = express();
 connectDB();
@@ -70,7 +69,6 @@ app.use("/upload", upload);
 // payment route
 app.use("/paypal", paypal);
 // instafeed
-app.use("/" , instafeed);
 //checkout route
 app.use('/' , checkout);
 

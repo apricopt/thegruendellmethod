@@ -63,7 +63,7 @@
 @media only screen and (max-width:500px) {
 
 .footer-area .footer-caption {
-    height:800px !important;
+    height:750px !important;
 }
 .footer-area {
     
@@ -332,3 +332,17 @@ object-fit:contain
 /* margin:2px !important; */
 /* } */
 
+@media (max-width:500px) {
+    .footerLinks {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around
+    }
+}
+
+.btnContainer {
+    height:auto;
+    display:flex;
+    justify-content:end;
+/* background-color: green; */
+}

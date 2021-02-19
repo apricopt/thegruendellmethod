@@ -2,8 +2,10 @@
     <h1 class="text-white">Membership subscription form</h1>
     <h3 class="text-white">You have Selected: {{courseName}}</h3>
     <h3 class="text-warning">{{message}}</h3>
-    <h4 class="text-white">${{price}}</h4>
-    <h6 class="text-white">Cancel anytime</h6>
+
+    <h4 class="text-danger">Original Price: <span style="text-decoration:line-through">$45</span>/month</h4>
+    <h4 class="text-white">Discounted Price: ${{price}}/month</h4>
+    <h6 class="text-white">Full access to member area as long as you need it, cancel when you are done learning.</h6>
     <div class="form-container col-md-6" >
         <form action="/paypal/membership" method="POST">
             {{!-- starts --}}

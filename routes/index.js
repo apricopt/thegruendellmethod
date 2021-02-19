@@ -2,7 +2,6 @@ const express = require("express");
 const router = express.Router();
 const User = require("../models/User");
 const flash = require("connect-flash");
-const userInstagram = require("user-instagram")
 
 const courses = require("../config/courses");
 router.get("/",async (req, res) => {

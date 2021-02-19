@@ -1,13 +1,54 @@
 <div class="container-fluid " style="margin-top:150px">
     <h3 class="text-warning text-center" >{{ courseName}}</h3>
-{{!-- <h5 class="text-info text-center">Number of videos : {{playlist.length}}</h5> --}}
+<h5 id="numberOfVideos" style="display:none">{{playlist.length}}</h5>
 <h5 class="text-success text-center" >Member area</h5>
   <div class="videoParent">
 <div class="row">
   <div class="col-md-9">
     <video controls width="100%" autoplay>
       <source src="{{url}}">
+
     </video>
+    <div class="btnContainer">
+        <button class="btn" onclick="previous()">
+            Previous
+        </button>
+        <button class="btn" onclick="next()">Next</button>
+    </div>
+      <script>
+          function next() {
+              
+const currentUrl = window.location.href;
+              const slashindex = currentUrl.lastIndexOf('/')
+              console.log(slashindex)
+let currentVid = currentUrl.slice(parseInt(slashindex));
+            currentVid = parseInt(currentVid.replace( /^\D+/g, ''))
+              const numberOfVideos = parseInt(document.getElementById('numberOfVideos').innerHTML);
+              
+const remainingUrl = currentUrl.slice(-1 , 0)
+    let nextVideo = currentVid +1;
+              if(nextVideo <= numberOfVideos) {
+
+window.location.replace(`${remainingUrl}${nextVideo}`)
+              }
+          }
+          function previous() {
+const currentUrl = window.location.href;
+              const slashindex = currentUrl.lastIndexOf('/')
+              console.log(slashindex)
+let currentVid = currentUrl.slice(parseInt(slashindex));
+            currentVid = parseInt(currentVid.replace( /^\D+/g, ''))
+              const numberOfVideos = parseInt(document.getElementById('numberOfVideos').innerHTML);
+              
+const remainingUrl = currentUrl.slice(-1 , 0)
+    let prevVideo = currentVid  - 1;
+              if(prevVideo >= 1) {
+
+window.location.replace(`${remainingUrl}${prevVideo}`)
+              }
+          }
+      </script>
+    
   </div>
   <div class="col-md-3 ">
     <div class="playlist">
