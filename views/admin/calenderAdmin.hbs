@@ -61,19 +61,19 @@
       <div class="row">
           {{!-- entry starts --}}
         <div class="input-field col s6">
-          <input placeholder="Title" id="first_name" name="title" type="text" >
+          <input placeholder="Title" id="first_name" required name="title" type="text" >
           <label for="first_name">Title</label>
         </div>
         {{!-- entry ends --}}
           {{!-- entry starts --}}
         <div class="input-field col s6">
-          <input placeholder="Placeholder" name="date" id="first_name" type="date" >
+          <input placeholder="Placeholder" name="date" id="first_name" required type="date" >
           <label for="first_name">Date</label>
         </div>
         {{!-- entry ends --}}
          {{!-- entry starts --}}
         <div class="input-field col s6">
-          <input placeholder="https://example.com" name="link" id="first_name" type="text" >
+          <input placeholder="https://example.com"  name="link" required id="first_name" type="text" >
           <label for="first_name">Link</label>
         </div>
         {{!-- entry ends --}}
@@ -82,10 +82,10 @@
          <div class="file-field input-field">
       <div class="btn">
         <span>Image</span>
-        <input name="image" type="file">
+        <input name="image" type="file" required>
       </div>
       <div class="file-path-wrapper">
-        <input name="image" class="file-path validate" type="text">
+        <input name="image" class="file-path validate" required type="text">
       </div>
     </div>
          
