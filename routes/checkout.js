@@ -47,7 +47,7 @@ router.post("/checkout" , (req , res) => {
     console.log("this body is recieved" , req.body)
     let price;
     if(req.body.price.length == 0  ) {
-        price= 11
+        price= 15
     }
     const dataToPush = {
       //   fill all the other entries
