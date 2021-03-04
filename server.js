@@ -26,6 +26,7 @@ const upload = require("./routes/fileupload");
 const paypal = require("./routes/paypal");
 const checkout = require("./routes/checkout")
 const app = express();
+
 connectDB();
 
 if (process.env.NODE_ENV === "development") {
