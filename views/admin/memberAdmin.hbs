@@ -9,6 +9,7 @@
       <th>Email Address</th>
       <th>Date of subscription</th>
       <th>Courses Enrolled In</th>
+      <th>Paid</th>
       <th>Delete</th>
     </tr>
   </thead>
@@ -20,6 +21,7 @@
       <td>{{ this.email }}</td>
       <td>{{ this.dateOfSubscription }}</td>
       <td>{{ this.courses }}</td>
+      <td>{{ this.paid }}</td>
 
       <td>
         <form action="/admin/members/deleteone/{{this._id}}">

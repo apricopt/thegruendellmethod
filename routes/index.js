@@ -4,24 +4,23 @@ const User = require("../models/User");
 const flash = require("connect-flash");
 
 const courses = require("../config/courses");
-router.get("/",async (req, res) => {
-    try{
-    const result = await userInstagram('thegruendellmethod')
-      let  threePosts = result.posts.map(item =>  
-           item.url
-        ) 
-                res.render("index" , {
-                feed1 : threePosts[0],
-                feed2 : threePosts[1],
-                    feed3: threePosts[2]
-            
-            })
-    }    catch(error) {
-        console.log(error)
-                res.render("index" , {
-                feed1 : "http://www.instagram.com/p/CKPQ0_JgTK4/",
-    })
-}});
+const memberauth = require("../middleware/memberAuth")
+router.get("/", async (req, res) => {
+  try {
+    const result = await userInstagram("thegruendellmethod");
+    let threePosts = result.posts.map((item) => item.url);
+    res.render("index", {
+      feed1: threePosts[0],
+      feed2: threePosts[1],
+      feed3: threePosts[2],
+    });
+  } catch (error) {
+    console.log(error);
+    res.render("index", {
+      feed1: "http://www.instagram.com/p/CKPQ0_JgTK4/",
+    });
+  }
+});
 
 router.get("/calender", (req, res) => {
   res.redirect("/calenderdynamic");
@@ -90,43 +89,46 @@ router.get("/subscribe/:courseNumber", (req, res) => {
     courseName: courseName,
     courseNumber: courseNumber,
     price: price,
+    message: req.flash("message"),
   });
 });
 
-router.get("/courseaccess/:courseNumber/:videoNumber", (req, res) => {
+router.get("/courseaccess/:courseNumber/:videoNumber", memberauth , (req, res) => {
+    
   const courseNumber = parseInt(req.params.courseNumber);
   const videoNumber = req.params.videoNumber;
   const course = courses[courseNumber - 1];
   const courseName = course.title;
   const playlist = course.playlist.map((video, index) => {
     return {
-        courseTitle: courseName,
+      courseTitle: courseName,
       title: video.title,
       url: video.url,
       content: video.content,
       videoNumber: index + 1,
-      number : video.number,
-      courseNumber: courseNumber
+      number: video.number,
+      courseNumber: courseNumber,
     };
   });
 
-  const currentVid = course.playlist[videoNumber-1];
+  const currentVid = course.playlist[videoNumber - 1];
 
+    
   const numberOfVideos = playlist.length;
   res.render("courseaccess", {
     playlist: playlist,
     courseName: courseName,
     courseNumber: courseNumber,
     numberOfVideos: numberOfVideos,
-    title :currentVid.title,
-    url : currentVid.url,
-    content: currentVid.content
+    title: currentVid.title,
+    url: currentVid.url,
+    content: currentVid.content,
   });
 });
 
-router.get("/learn" , (req, res) => {
-  res.render("learn")
-})
+router.get("/learn", (req, res) => {
+  res.render("learn");
+});
 router.get("/login", (req, res) => {
   res.render("login", {
     message: req.flash("message"),
@@ -148,9 +150,13 @@ router.post("/registerhandler", (req, res) => {
     .catch((err) => console.log(err));
 });
 
+router.get("/connect", (req, res) => {
+  res.render("connect");
+});
 
-router.get("/connect" , (req, res) => {
-  res.render("connect")
+router.get('/unsubscribe' , (req, res) => {
+    res.render("unsubscribe" , {
+        message : req.flash("message")
+    })
 })
-
 module.exports = router;

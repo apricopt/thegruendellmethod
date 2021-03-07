@@ -38,12 +38,16 @@ router.post("/loginsubmit" , async (req, res) => {
     req.flash("message" , "Password is incorrect")
   return  res.redirect(req.header('referrer'))
   }
+    if(!member.paid) {
+    req.flash("message" , "You have not paid! You can't access this course")
+  return  res.redirect(req.header('referrer'))
+    }
   let courseNumber = parseInt(req.body.courseNumber)
   if(!member.courses.includes(courseNumber)){
     req.flash("message" , "You cannot access this course. You can only access the purchased courses")
   return  res.redirect(req.header('referrer'))
   }
-
+      req.session.membered = true;
 res.redirect(`/courseaccess/${courseNumber}/1`)
   
 })

@@ -1,0 +1,28 @@
+
+<div class="container pt-5 my-5">
+    <h1 class="text-white">UnSubscribe</h1>
+    <h3 class="text-warning">{{message}}</h3>
+    <div class="form-container col-md-6" >
+        <form action="/paypal/subscription" method="POST">
+          {{!-- starts --}}
+        <div class="form-group">
+          <label for="" class="text-white">Email</label>
+          <input type="text"  required name="email" id="" class="form-control" placeholder="Enter your Email" aria-describedby="helpId">
+        </div>
+          {{!-- ends --}}
+          {{!-- starts --}}
+          <div class="row">
+        <div class="form-group col-md-6">
+          <label for="" class="text-white">Password</label>
+          <input type="password" name="password" required id="" class="form-control" placeholder="Password" aria-describedby="helpId">
+          </div>
+          </div>
+          {{!-- ends --}}
+        <div class="form-group ">
+
+        <button type="submit" class="btn btn-primary">UnSubscribe Now</button>
+        </div>
+        </div>
+        </form>
+    </div>
+</div>

@@ -77,6 +77,7 @@ router.get("/admin/members", checkAuth, (req, res) => {
         email: item.email,
         dateOfSubscription: fns.format(item.dateOfSubscription, "dd/MMM/yyyy"),
         courses: item.courses,
+          paid: item.paid
       }));
       console.log(data);
       res.render("admin/memberAdmin", {

@@ -25,9 +25,9 @@ paypal.configure({
 // paypal.configure({
 //   mode: "live", //sandbox or live
 //   client_id:
-//     "AZ2TWSbrGsjHHGINwWHWnosbbzdyfTHx52t9KLCZXJqStsoaIJZf6t2-NiuNyMLMXxjWoEW-4V_7ceLV",
+//     "ATl7xXG5ctLoIbwxRmfXZDp4a_lFxxZp6Gk1pcjVab9hPvLUBxpZVA5FTuMesJFoAWcj9c33mbq4c8ha",
 //   client_secret:
-//     "EL2Gi9koFe5ha63YFxai9oXp3H3Jylpc_RGnopEj5olEZ6gPNXFPRoixcY25LOXcVLRD4S9_C-THoMaL",
+//     "EBZBcm2q0V9vL9raDHUidD12Kii8H-49v-ahdTokS2XFhzvIsq4Cogx5gP2Y35_VIjHNxC6zBSFtP8-t",
 // });
 
 router.get("/", (req, res) => {

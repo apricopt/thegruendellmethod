@@ -25,7 +25,8 @@ const calender = require("./routes/calender");
 const upload = require("./routes/fileupload");
 const paypal = require("./routes/paypal");
 const checkout = require("./routes/checkout")
-const recurring = require("./routes/recurring")
+// const recurring = require("./routes/recurring")
+ const recurring = require("./routes/restrecurring")
 const app = express();
 
 connectDB();
