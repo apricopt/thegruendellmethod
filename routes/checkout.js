@@ -25,11 +25,11 @@ const dora = process.env.NODE_ENV;
 
 // for live mode
 paypal.configure({
-  mode: "live", //sandbox or live
-  client_id:
-    "ATl7xXG5ctLoIbwxRmfXZDp4a_lFxxZp6Gk1pcjVab9hPvLUBxpZVA5FTuMesJFoAWcj9c33mbq4c8ha",
-  client_secret:
-    "EBZBcm2q0V9vL9raDHUidD12Kii8H-49v-ahdTokS2XFhzvIsq4Cogx5gP2Y35_VIjHNxC6zBSFtP8-t",
+mode: "live", //sandbox or live
+client_id:
+"ATl7xXG5ctLoIbwxRmfXZDp4a_lFxxZp6Gk1pcjVab9hPvLUBxpZVA5FTuMesJFoAWcj9c33mbq4c8ha",
+client_secret:
+"EBZBcm2q0V9vL9raDHUidD12Kii8H-49v-ahdTokS2XFhzvIsq4Cogx5gP2Y35_VIjHNxC6zBSFtP8-t",
 });
 
 router.get("/checkout" , (req, res)=> {
@@ -42,11 +42,16 @@ router.get("/checkout" , (req, res)=> {
 
 router.post("/checkout" , (req , res) => {
   // @step2 : fill the below object this will be the data sent to the database with paid status as false because after successfull payment we will change it to true
+    try{
+
+    
 
     console.log("this body is recieved" , req.body)
     let price;
     if(req.body.price.length == 0  ) {
         price= 15
+    }else{
+        price = req.body.price;
     }
     const dataToPush = {
       //   fill all the other entries
@@ -56,6 +61,9 @@ router.post("/checkout" , (req , res) => {
       qty : req.body.qty,
       price: price,
       address: req.body.address,
+        city: req.body.city,
+        state : req.body.state,
+        zip : req.body.zip,
       //   do not remove the paid
       paid: false,
     };
@@ -122,6 +130,11 @@ router.post("/checkout" , (req , res) => {
         }
       }
     });
+
+
+    }catch(err) {
+        console.log("Overall hi error agya " , err)
+    }
 
     // below ends the async function of memberfinding
 })

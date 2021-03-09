@@ -5,6 +5,7 @@
 <div class="row">
                     <div class="col-12 mt-5 pt-5">
                         <h2 class="contact-title text-center text-pink">Checkout</h2>
+                        <p class="text-info">Important Note: Shipping to continental US only</p>
                         <h4 style="color:orange" class="text-center">Price : $<span id="price">15</span></h4>
                     </div>
                     <div class="col-lg-8">
@@ -14,37 +15,69 @@
   {{message}}!
 </div>
 {{/if}}
-                        <form class="form-contact contact_form" action="/checkout" method="POST">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input required class="form-control  valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
-                                    </div>
+                    <form class="form-contact contact_form" action="/checkout" method="POST">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input required class="form-control  valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input required class="form-control  valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
-                                    </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input required class="form-control  valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="quantity" class="text-white mt-1"> </label>
-                                        <input required class="form-control valid" name="contact" id="name" type="text" onfocus="this.placeholder = 'Contact number'" placeholder="Contact number">
-                                    </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="quantity" class="text-white mt-1"> </label>
+                                    <input required class="form-control valid" name="contact" id="name" type="text" onfocus="this.placeholder = 'Contact number'" placeholder="Contact number">
                                 </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="quantity" class="text-white">Quantity:</label>
-                                        <input required class="form-control valid" type="number" onblur="handlePrice(event)" name="qty"  id="qty" type="text"  placeholder="Quantity">
-                                    </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <label for="quantity" class="text-white">Quantity:</label>
+                                    <input required class="form-control valid" type="number" onblur="handlePrice(event)" name="qty"  id="qty" type="text"  placeholder="Quantity">
                                 </div>
-                                 <div class="col-sm-6"></div>
-                                 <div class="col-sm-6"></div>
-                                <div class="col-12">
-                                    <div class="form-group">
-                                        <input required class="form-control" name="address"  placeholder="Enter Address">
-                                    </div>
+                            </div>
+                             <div class="col-sm-6"></div>
+                             <div class="col-sm-6"></div>
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input required class="form-control" name="address"  placeholder="Street Address">
                                 </div>
+                            </div>
+
+
+
+
+{{!-- one input --}}
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <input required class="form-control" name="city"  placeholder="City">
+                                    </div>
+
+                                </div>
+{{!-- one input ends --}}
+{{!-- one input --}}
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <input required class="form-control" name="state"  placeholder="state">
+                                    </div>
+
+                                </div>
+{{!-- one input ends --}}
+{{!-- one input --}}
+                                <div class="col-sm-12 col-md-4">
+                                    <div class="form-group">
+                                        <input required class="form-control" name="zip"  placeholder="Zip">
+                                    </div>
+
+                                </div>
+{{!-- one input ends --}}
+
+
+
+                            
                             </div>
                             <div class="form-group mt-3">
                                 {{!-- <button type="submit" class="button button-contactForm boxed-btn">Send</button> --}}
@@ -88,7 +121,7 @@
        function handlePrice(e) {
            const priceElement = document.getElementById('price')
         const qty = e.target.value;
-           let totalPrice = qty*11
+           let totalPrice = qty*15
             priceElement.innerHTML = totalPrice;
            if(qty == "") {
                e.target.value = 1
