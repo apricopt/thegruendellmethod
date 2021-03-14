@@ -33,6 +33,7 @@ client_secret:
 
 
 var isoDate = new Date();
+isoDate.setMonth(isoDate.getMonth()+1)
 isoDate.setSeconds(isoDate.getSeconds() + 4);
 isoDate.toISOString().slice(0, 19) + 'Z';
 
@@ -88,7 +89,7 @@ router.post("/recurring", (req, res) => {
         "return_url": `${theServer}/paypal/success`,
         "setup_fee": {
             "currency": "USD",
-            "value": "27"
+            "value":`${req.body.price}` 
         }
         
     },
