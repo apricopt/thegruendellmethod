@@ -31,7 +31,7 @@ router.post("/contactsubmit", (req, res) => {
 router.post("/loginsubmit" , async (req, res) => {
   const member = await Member.findOne({email: req.body.email}) ;
   if(member ==null){
-    req.flash("message" , "Email doesnot exits")
+    req.flash("message" , "Email does not exit")
   return  res.redirect(req.header('referrer'))
   }
   if(member.password !== req.body.password ){

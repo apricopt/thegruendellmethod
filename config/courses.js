@@ -85,7 +85,7 @@ const courses = [
           "Increase your electromagnetic field by initiating a positive emotion- use a memory if you need a favorite moment, person or dream. Don't just think about it, feel it. Experience it as though it were real",
           "Lock in that energy and intensify it. Send that healing energy to every cell of your body and then out to the world  ",
         ],
-        url: "/assets/videos/bulletproofimmunity/05.mp4",
+        url: "/assets/videos/bulletproofimmunity/07.mp4",
       },
       {
         number: "Video #8",

@@ -48,7 +48,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash());
 app.use(
   session({
-    cookie: { maxAge: 60000 },
+// cookie: { maxAge: 60000 },
+    httpOnly: false,
     secret: "wort",
     resave: false,
     saveUninitialized: false,

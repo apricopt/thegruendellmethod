@@ -24,11 +24,11 @@ if (process.env.NODE_ENV === "development") {
 
 // for live mode
 paypal.configure({
-  mode: "live", //sandbox or live
-  client_id:
-    "ATl7xXG5ctLoIbwxRmfXZDp4a_lFxxZp6Gk1pcjVab9hPvLUBxpZVA5FTuMesJFoAWcj9c33mbq4c8ha",
-  client_secret:
-    "EBZBcm2q0V9vL9raDHUidD12Kii8H-49v-ahdTokS2XFhzvIsq4Cogx5gP2Y35_VIjHNxC6zBSFtP8-t",
+mode: "live", //sandbox or live
+client_id:
+"ATl7xXG5ctLoIbwxRmfXZDp4a_lFxxZp6Gk1pcjVab9hPvLUBxpZVA5FTuMesJFoAWcj9c33mbq4c8ha",
+client_secret:
+"EBZBcm2q0V9vL9raDHUidD12Kii8H-49v-ahdTokS2XFhzvIsq4Cogx5gP2Y35_VIjHNxC6zBSFtP8-t",
 });
 
 
@@ -51,6 +51,7 @@ router.post("/recurring", (req, res) => {
     return res.redirect(req.header("referrer"));
   }
   // first checking if this person a/lready purchased the course or not
+    try{
   (async () => {
     const member = await Member.find({ email: req.body.email });
     let alreadyCourses = [];
@@ -126,6 +127,7 @@ var billingPlanUpdateAttributes = [
 //billing paln update attribute ends
 //
 // billing agreement object starting
+console.log("this is iso date" , isoDate)
 var billingAgreementAttributes = {
     "name": "Fast Speed Agreement",
     "description": "Agreement for Fast Speed Plan",
@@ -200,6 +202,19 @@ paypal.billingPlan.create(billingPlanAttributes, function (error, billingPlan) {
 
     // below ends the async function of memberfinding
   })();
+
+}// try ends
+catch(err)
+
+ {
+     console.log(err)
+        req.flash("message", "Error Occured");
+        return res.redirect(req.header("referrer"));
+ }
+
+
+
+
 });
 
 // if the payment was successfull then to execute the payment
