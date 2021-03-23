@@ -43,7 +43,7 @@ const courses = [
           "Take activated charcoal or bentonite clay to bind to toxins and bring them out",
           "Infrared sauna/ Ion Cleanse",
           "Sweat (no antiperspirants) Allow the toxins to come out of your pores as they are designed. Ways to sweat; workout/movement, sauna, sun, hot tub, hot spring, hot yoga.",
-          "Detox bath - - 3 cups of epsom salt,  - 1 cup baking soda, - 1 cup apple cider vinegar.  - Water as hot as possible for at least 30 minutes.",
+          "Detox bath  -3 cups of epsom salt,  - 1 cup baking soda, - 1 cup apple cider vinegar.  - Water as hot as possible for at least 30 minutes.",
           "Dry/Body brushing-  - With a boar bristle brush, begin brushing at the center of the chest working your way outward in a spiral, using short strokes aimed toward the heart - Work your way all the way down to the toes. Always brush towards the heart to manually clear your lymphatic system. - Circles and extra time on the tummy area. ",
           "Inversion therapy - Sit up-side down on the couch for 10 - 20 minutes.",
           "Hot/cold plunge - Hot shower and cold rinse or, hot tub and cold plunge (or similar set up). Alternate between the two a few minutes at a time for 20 minutes, try to tolerate the cold longer and longer. *Bonus points for practicing the WIM Hoff technique.",
@@ -53,7 +53,7 @@ const courses = [
       },
       {
         number: "Video #5",
-        title: "Flush out of your filters (liver and kidneys)",
+        title: "Flush out your filters (liver and kidneys)",
         content: [
           "Drink ¾ to 1 Gallon of water. I use mason jars to drink from, easy to know how much I’ve had. 4 full jars and I’ve had a gallon",
           "*Bonus points- squeeze some lemon or, add a few drops of doterra lemon oil into your water to help clean your body, help digestion and, help your internal pH which means bad crap can’t take over inside your body.",
@@ -65,7 +65,7 @@ const courses = [
         title: "Move your body - Jumping Jacks/Jumping Rope/Ice Skaters",
         content: [
           "Beginners start with 5 minutes in the sun, and build up to 20 to 30 minutes",
-          "50 seconds work followed by,10 seconds rest (until you work up to continuous work, without resting)",
+          "50 seconds work followed by 10 seconds rest (until you work up to continuous work, without resting)",
           "Make sure the sun is hitting your skin and, ideally, your eyes. Be a kid again, smile and have joy in your heart",
           " You will make Vitamin D which will help low energy, depression, brittle bones, always getting sick and hair loss",
           "You will increase your fast twitch muscle fibers and fire up sleeping accessory muscles which means no more joint pain (and a sexy shape)And you will move your lymphatic system which means the toxic crap is removed and the good stuff floods the cells"
@@ -82,7 +82,7 @@ const courses = [
           "Sit someplace quiet, the more plants around the better",
           "Bring all your focus and attention to your heart area with your breath flowing in and out of that area",
           "Slow your breath",
-          "Increase your electromagnetic field by initiating a positive emotion- use a memory if you need a favorite moment, person or dream. Don't just think about it, feel it. Experience it as though it were real",
+          "Increase your electromagnetic field by initiating a positive emotion- use a memory if you need,a favorite moment, person or dream. Don't just think about it, feel it. Experience it as though it were real",
           "Lock in that energy and intensify it. Send that healing energy to every cell of your body and then out to the world  ",
         ],
         url: "/assets/videos/bulletproofimmunity/07.mp4",
@@ -135,7 +135,7 @@ const courses = [
           "Beta glucan- strengths immune system",
           "Vitamin C (NOT ascorbic acid)",
           "Zinc supplements and lozenges",
-          "Colossal silver (nano) spray under tongue every hour",
+          "Colloidal silver (nano) spray under tongue every hour",
           "Goldenseal (bacterial)",
           "Kyolic garlic organic",
           "Oregano oil (viral and bacterial)",
@@ -147,7 +147,7 @@ const courses = [
         number: "Video #13",
         title: "Daily affirmation",
         content: [
-          "”I am healthy & whole, my thoughts and body are purified”I write my affirmation on my bathroom mirror in lipstick or eyeliner so I can repeat it while I get ready. ",
+          "”I am healthy & whole, my thoughts and body are purified” I write my affirmation on my bathroom mirror in lipstick or eyeliner so I can repeat it while I get ready. ",
         ],
         url: "/assets/videos/bulletproofimmunity/13.mp4",
       },

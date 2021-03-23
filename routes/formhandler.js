@@ -2,11 +2,12 @@ const express = require("express");
 const router = express.Router();
 const Contact = require("../models/Contact");
 const Member = require("../models/Member")
+const sendMail = require("../routes/nodemailer")
 
 
 
 router.post("/contactsubmit", (req, res) => {
-  console.log(req.body);
+    console.log(req.query)
 
   const contact = new Contact({
     name: req.body.name,
@@ -18,6 +19,14 @@ router.post("/contactsubmit", (req, res) => {
     instagram : req.body.instagram,
     youtube: req.body.youtube
   });
+
+    if(req.query.subscribe == ''){
+        sendMail(req.body.email)
+        return res.redirect("/")
+
+    }
+
+
   contact
     .save()
     .then((result) => res.render("contact" , {

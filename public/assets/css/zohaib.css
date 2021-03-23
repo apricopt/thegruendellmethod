@@ -346,3 +346,17 @@ object-fit:contain
     justify-content:end;
 /* background-color: green; */
 }
+
+
+.sadaModal {
+    background-color:#354229 !important;
+    border:2px solid white !important;
+
+}
+
+.sadaModal h4 {
+    color:white !important;
+}
+.sadaModal input {
+    color:white !important;
+}

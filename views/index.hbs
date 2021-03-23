@@ -1,5 +1,49 @@
 <main>
 
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content sadaModal">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Get your freebie via email!</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+                        <form class="form-contact contact_form" action="/contactsubmit?subscribe" method="POST">
+      <div class="modal-body">
+                            <div class="row">
+                                <div class="col-12"></div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control  valid" name="name" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" placeholder="Enter your name">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control  valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control valid" name="contact" id="name" type="text" onfocus="this.placeholder = 'Contact number'" placeholder="Contact number">
+                                    </div>
+                                </div>
+                            </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-danger">Submit</button>
+{{!-- <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button> --}}
+      </div>
+                        </form>
+
+    </div>
+  </div>
+</div>
 <!-- slider Area Start-->
         {{!-- <div class="slider-area ">
             <div class="slider-active">
@@ -330,6 +374,9 @@ e = d.getElementsByTagName(s)[0];e.parentNode.insertBefore(i, e);
             <!-- left Contents -->
             <div class="tailor-details text-center wow fadeInLeft" data-wow-delay=".2s">
                 <span>Hello from</span>
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
+</button>
                 <h3>Elizabeth Gruendell</h3>
                 <p class="px-4"> I am living proof that you can heal and take your life back. It’s a lot of work, but that’s why I am here. If you commit to the work, I will guide you! The ball is in your court. Are you ready?
                             </p>

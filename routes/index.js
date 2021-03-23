@@ -1,10 +1,20 @@
 const express = require("express");
+const path = require("path")
 const router = express.Router();
 const User = require("../models/User");
 const flash = require("connect-flash");
 
 const courses = require("../config/courses");
 const memberauth = require("../middleware/memberAuth")
+
+
+
+
+// to send freebie
+router.get("/getmefreebie" , (req, res)=> {
+    res.sendFile(path.join(__dirname , '../public/sugarfreebie.pdf'))
+
+})
 router.get("/", async (req, res) => {
   try {
     const result = await userInstagram("thegruendellmethod");

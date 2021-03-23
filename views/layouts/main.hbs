@@ -74,5 +74,24 @@ Fitness. Nutrition. Meditation. Holistic Health and Healing lifestyle based in L
         <script src="/assets/js/plugins.js"></script>
         <script src="/assets/js/main.js"></script>
         
+    <script type="text/javascript">
+$(window).on('load', function() {
+setTimeout(() => {
+    console.log("time out called")
+if(!window.localStorage.getItem("modalShown")) {
+    console.log("if k andr agya")
+$('#myModal').modal('show');
+window.localStorage.setItem("modalShown" , "yea")
+
+}else {
+console.log("modal already shown")
+}
+
+} , 5000)
+});
+{{!-- $(window).on('load', function() { --}}
+{{!-- $('#myModal').modal('show'); --}}
+{{!-- }); --}}
+</script>
     </body>
 </html>
