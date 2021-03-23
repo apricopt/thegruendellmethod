@@ -15,7 +15,7 @@ const courses = [
       {
         number: "Video #2",
         title:
-          "Give your body what it needs to heal -9 cups of veggies (from the Wahls protocol)",
+          "Give your body what it needs to heal - 9 cups of veggies (from the Wahls protocol)",
         content: [
           "3 cups (about one heaping plateful) of leafy green vegetables, such as kale, collards, chard, spinach or lettuce, which provide vitamins A, B, C and K.",
           "3 cups of sulfur-rich vegetables, such as cabbage, broccoli, cauliflower, onions, garlic, mushrooms and asparagus, because they support the removal of toxins from the body.",
