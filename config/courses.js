@@ -44,7 +44,7 @@ const courses = [
           "Infrared sauna/ Ion Cleanse",
           "Sweat (no antiperspirants) Allow the toxins to come out of your pores as they are designed. Ways to sweat; workout/movement, sauna, sun, hot tub, hot spring, hot yoga.",
           "Detox bath  -3 cups of epsom salt,  - 1 cup baking soda, - 1 cup apple cider vinegar.  - Water as hot as possible for at least 30 minutes.",
-          "Dry/Body brushing-  - With a boar bristle brush, begin brushing at the center of the chest working your way outward in a spiral, using short strokes aimed toward the heart - Work your way all the way down to the toes. Always brush towards the heart to manually clear your lymphatic system. - Circles and extra time on the tummy area. ",
+          "Dry/Body brushing - With a boar bristle brush, begin brushing at the center of the chest working your way outward in a spiral, using short strokes aimed toward the heart - Work your way all the way down to the toes. Always brush towards the heart to manually clear your lymphatic system. - Circles and extra time on the tummy area. ",
           "Inversion therapy - Sit up-side down on the couch for 10 - 20 minutes.",
           "Hot/cold plunge - Hot shower and cold rinse or, hot tub and cold plunge (or similar set up). Alternate between the two a few minutes at a time for 20 minutes, try to tolerate the cold longer and longer. *Bonus points for practicing the WIM Hoff technique.",
           "Take Apple Cider Vinegar - 1 Tablespoon in a glass of water 20 mins before eating to help food breakdown",
