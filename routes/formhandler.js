@@ -7,6 +7,7 @@ const sendMail = require("../routes/nodemailer")
 
 
 router.post("/contactsubmit", (req, res) => {
+    console.log("request recieved")
     console.log(req.query)
 
   const contact = new Contact({
